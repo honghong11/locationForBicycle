@@ -8,28 +8,33 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/saveFirstInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="保存第一次经纬度"
-        />
-    <TextView
-        android:id="@+id/firstLocation"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/saveFirstInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存第一次经纬度"
+            />
+        <TextView
+            android:id="@+id/firstLocation"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="计算距离"
-        />
-    <TextView
-        android:id="@+id/showDistance"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"/>
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算距离"
+            />
+        <TextView
+            android:id="@+id/showDistance"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutTest"
+            android:text="布局测试"/>
 </LinearLayout>
