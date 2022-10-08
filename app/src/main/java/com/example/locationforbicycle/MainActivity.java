@@ -27,7 +27,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Timer;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
 
 private Location lastPlaceLocation;
 private Context context;
@@ -47,6 +47,10 @@ private float allDistance = 0l;
         setContentView(R.layout.activity_main);
         saveFirstInfo = (Button) findViewById(R.id.saveFirstInfo);
         calculate = (Button)findViewById(R.id.calculate);
+
+        calculate.setOnClickListener(this);
+
+
         firstLocation = (TextView)findViewById(R.id.firstLocation);
         distance = (TextView)findViewById(R.id.showDistance);
 
@@ -105,6 +109,10 @@ private float allDistance = 0l;
         });
     }
 
+    @Override
+    public void onClick(View var1){
+
+    }
 
     private void startRecord(Location location){
         Runnable runnable = new Runnable() {
