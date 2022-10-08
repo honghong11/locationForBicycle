@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         layoutTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(myContext,LayoutTestActivity.class);
+                Intent intent = new Intent(myContext,ListViewActivity.class);
                 startActivity(intent);
             }
         });

@@ -21,6 +21,9 @@
         <activity android:name=".LayoutTestActivity">
 
         </activity>
+        <activity android:name=".ListViewActivity">
+
+        </activity>
     </application>
 
 </manifest>

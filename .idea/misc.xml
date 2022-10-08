@@ -3,19 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.15307971014492755" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/androidtest/src/main/res/layout/activity_listview.xml" value="0.3392210144927536" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/androidtest/src/main/res/layout/activity_main.xml" value="0.3432971014492754" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/androidtest/src/main/res/layout/layout_test.xml" value="0.3432971014492754" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/androidtest/src/main/res/layout/list_item.xml" value="0.3392210144927536" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/app/src/main/res/layout/layout_test.xml" value="0.3432971014492754" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/musicmodule/src/main/res/layout/activity_main.xml" value="0.3109375" />
+        <entry key="..\:/docu/as_workspace/1/locationForBicycle/musicmodule/src/main/res/layout/musicplayerviewlayout.xml" value="0.3109375" />
         <entry key="..\:/docu/as_workspace/locationForBicycle/app/src/main/res/layout/activity_main.xml" value="0.3541666666666667" />
         <entry key="..\:/docu/as_workspace/locationForBicycle/musicmodule/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/docu/as_workspace/locationForBicycle/musicmodule/src/main/res/layout/musicplayerviewlayout.xml" value="0.1" />
-        <entry key="androidtest/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
-        <entry key="androidtest/src/main/res/layout/layout_test.xml" value="0.2837081909179688" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20697463768115942" />
-        <entry key="musicmodule/src/main/res/layout/activity_main.xml" value="0.13541666666666666" />
-        <entry key="musicmodule/src/main/res/layout/musicplayerviewlayout.xml" value="0.13541666666666666" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
