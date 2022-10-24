@@ -24,6 +24,20 @@
         <activity android:name=".ListViewActivity">
 
         </activity>
+
+        <activity android:name=".SceondActivity">
+
+        </activity>
+
+        <activity android:name=".ThirdActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.itcast.START_ACTIVITY"/>
+                <data android:mimeType="video/mpeg" android:scheme="https"/>
+<!--                <category android:name="android.intent.category.APP_BROWSER"/>-->
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
