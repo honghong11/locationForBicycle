@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.musicmodule.R;
+import com.example.musicmodule.Service.MusicService;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,8 @@ public class MusicPlayerView extends LinearLayout {
     private MediaPlayer myMediaPlayer =  new MediaPlayer();;
     private Button backButton,startPlayButton,stopPlayButton;
     private Context myContext;
+    private MusicService musicService;
+
     public MusicPlayerView(Context context) {
         super(context);
         myContext = context;
@@ -62,7 +65,6 @@ public class MusicPlayerView extends LinearLayout {
         startPlayButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view){
-
                 try {
                     myMediaPlayer.setDataSource("/storage/emulated/0/qqmusic/song/心爱.mp3");
                 } catch (IOException e) {
