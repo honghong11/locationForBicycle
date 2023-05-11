@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void initView(){
         Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,animationButton,httpTestButton;
+        Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,signInButton;
         secondTestButton = findViewById(R.id.button4);
         implicitButton3 = findViewById(R.id.button3);
         dataTransButton = findViewById(R.id.button5);
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        signInButton = findViewById(R.id.button6);
         layoutTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,6 +157,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //跳转至登陆页面
+                Intent intent = new Intent(myContext,SignInActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -169,6 +179,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         //action
         intent.setAction("cn.itcast.START_ACTIVITY");
+        //data
+        intent.setData(Uri.parse("https"));
+        //category
+        intent.addCategory("android.intent.category.APP_BROWSER");
         startActivity(intent);
     }
 
