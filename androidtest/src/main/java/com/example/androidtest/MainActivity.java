@@ -83,22 +83,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void initView(){
         Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,animationButton,httpTestButton;
-        Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,signInButton;
+//        Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,signInButton;
         secondTestButton = findViewById(R.id.button4);
         implicitButton3 = findViewById(R.id.button3);
         dataTransButton = findViewById(R.id.button5);
         layoutTestButton = findViewById(R.id.layout_test);
-        animationButton = findViewById(R.id.button6);
+//        animationButton = findViewById(R.id.button6);
         httpTestButton = findViewById(R.id.http_test);
 
-        animationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(myContext,AnimationActivity.class);
-                startActivity(intent);
-            }
-        });
-        signInButton = findViewById(R.id.button6);
+//        animationButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(myContext,AnimationActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        signInButton = findViewById(R.id.button6);
         layoutTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,14 +157,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //跳转至登陆页面
-                Intent intent = new Intent(myContext,SignInActivity.class);
-                startActivity(intent);
-            }
-        });
+//        signInButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //跳转至登陆页面
+//                Intent intent = new Intent(myContext,SignInActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 
