@@ -1,5 +1,6 @@
 package com.example.androidtest;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,13 +8,28 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
 public class MainActivity extends AppCompatActivity {
     private Context myContext;
     private String TAG = "MainActivity";
+    private static MyHandler myHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +82,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initView(){
-        Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton;
+        Button layoutTestButton,secondTestButton,implicitButton3,dataTransButton,animationButton,httpTestButton;
         secondTestButton = findViewById(R.id.button4);
         implicitButton3 = findViewById(R.id.button3);
         dataTransButton = findViewById(R.id.button5);
         layoutTestButton = findViewById(R.id.layout_test);
+        animationButton = findViewById(R.id.button6);
+        httpTestButton = findViewById(R.id.http_test);
+
+        animationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(myContext,AnimationActivity.class);
+                startActivity(intent);
+            }
+        });
         layoutTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +113,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        httpTestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 网络访问mock接口 https://www.fastmock.site/#/project/730e1ce09a94dad4d68d94097f7ad256/api/test
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            URL url =new URL("https://www.fastmock.site/mock/730e1ce09a94dad4d68d94097f7ad256/test/api/usrinfo");
+                            HttpsURLConnection httpURLConnection = (HttpsURLConnection) url.openConnection();
+                            InputStreamReader inputStreamReader = new InputStreamReader(httpURLConnection.getInputStream());
+                            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                            String result = bufferedReader.readLine();
+                            Log.d("httppp",result+"---");
+                            Message message = new Message();
+                            message.what = 1;
+                            message.obj = "123";
+                            myHandler.sendMessage(message);
+                        } catch (MalformedURLException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        });
 
         implicitButton3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,10 +169,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         //action
         intent.setAction("cn.itcast.START_ACTIVITY");
-        //data
-        intent.setData(Uri.parse("https"));
-        //category
-        intent.addCategory("android.intent.category.APP_BROWSER");
         startActivity(intent);
     }
 
@@ -139,6 +188,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
+        }
+    }
+    class MyHandler extends Handler{
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            switch (msg.what){
+                case 1:
+
+            }
         }
     }
 }

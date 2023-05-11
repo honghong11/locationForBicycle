@@ -10,4 +10,16 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:text="back"/>
+
+    <Button
+        android:id="@+id/writ"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="writ"/>
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text="read"/>
 </LinearLayout>
